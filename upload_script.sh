@@ -1,6 +1,8 @@
 #!/bin/bash
 #--------------------------------------------------------------------+
 # Color picker definitions
+source .env
+
 BLK='\e[30m'; blk='\e[90m'; BBLK='\e[40m'; bblk='\e[100m'
 RED='\e[31m'; red='\e[91m'; BRED='\e[41m'; bred='\e[101m'
 GRN='\e[32m'; grn='\e[92m'; BGRN='\e[42m'; bgrn='\e[102m'
@@ -82,7 +84,7 @@ detect_and_upload() {
         "js/app.js"
         "css/styles.css"
     )
-    local remote_root="ftps://www.adrianbueno.com/public_html"
+    local remote_root="REMOTE_ROOT"
 
     # Display the main script header
     display_header "Script Uploader"
